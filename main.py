@@ -8,11 +8,7 @@ from database import engine, SessionLocal
 # Create the database tables
 models.Base.metadata.create_all(bind=engine)
 
-app = FastAPI(
-    title="Product Management API",
-    description="API for managing products in a store",
-    version="1.0.0"
-)
+app = FastAPI()
 
 # Dependency to get DB session
 def get_db():
